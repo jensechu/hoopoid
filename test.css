@@ -41,6 +41,12 @@ h2 {
      border: 1px solid black;
 }
 
+#hoop_spin {
+    height: 25px;
+    width: 200px;
+    background-color: white;
+}
+
 .pink {
     background-color: #ff6699;
 }
@@ -51,4 +57,8 @@ h2 {
 
 .green {
     background-color: green;
+}
+
+.white {
+    background-color: #fff;
 }

@@ -6,7 +6,8 @@ $(function(){
     hoop_box.attr({fill: "black"});
 
     //Create hoop and base tape color
-    var hoop = paper.circle(195, 200, 150, 150);
+    var hooper = paper.circle(195, 200, 150, 150);
+    var hoop = hooper;
     hoop.attr({stroke: "#ff6699", "stroke-width": 10});
     
     //Path for all tapes
@@ -49,6 +50,10 @@ $(function(){
 	hoop.attr({stroke: "green"});
     });
 
+    $(".base.white").click(function() {
+	grip_set.attr({stroke: "white"});
+    });
+
     //Secondary colors
     $(".secondary.pink").click(function() {
 	secondary_set.attr({stroke: "#ff6699"});
@@ -62,6 +67,10 @@ $(function(){
 	secondary_set.attr({stroke: "green"});
     });
     
+    $(".secondary.white").click(function() {
+	grip_set.attr({stroke: "white"});
+    });
+
     //Grip colors
     $(".grip.pink").click(function() {
 	grip_set.attr({stroke: "#ff6699"});
@@ -75,5 +84,16 @@ $(function(){
 	grip_set.attr({stroke: "green"});
     });
 	
-
- })
+    $(".grip.white").click(function() {
+	grip_set.attr({stroke: "white"});
+    });
+	
+//Spin the hoop!
+    
+    $("#hoop_spin").click(function() {
+	hoop.animate({rotation: 360}, 4000);
+	secondary_set.animateWith(hoop, {rotation: 360}, 4000);
+	grip_set.animateWith(hoop, {rotation: 360}, 4000);
+    });
+	
+})
