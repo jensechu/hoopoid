@@ -1,15 +1,54 @@
 body {
- 
-    width: 500px;
- }
-
-h1 {
+    background-color: #000;
     margin-left: auto;
     margin-right: auto;
-  }
+    width: 800px;
+    font-size: 10pt;
+}
 
-#button {
-    width: 620px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+h2 {
+    font-family: sans-serif;
+    font-weight: lighter;
+
+}
+
+#hoop {
+    position: relative;
+    float: left;  
+    padding: 0px; margin: 0px;
+}
+
+#hoop_ui {
+    position: relative;
+    float: left;
+    height: 300px;
+    width: 360px;
+    margin-top: 40px;
+    padding: 0px 10px 10px 10px;
+    background-color: #787878;
+
+}
+
+#hoop_ui ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#hoop_ui li {
+     display: inline;
+     height: 45px;
+     width: 30px; 
+     border: 1px solid black;
+}
+
+.pink {
+    background-color: #ff6699;
+}
+
+.blue {
+    background-color: #1B70E0;
+}
+
+.green {
+    background-color: green;
+}
