@@ -51,7 +51,7 @@ $(function(){
     });
 
     $(".base.white").click(function() {
-	base_set.attr({stroke: "white"});
+	hoop.attr({stroke: "white"});
     });
 
     //Secondary colors
