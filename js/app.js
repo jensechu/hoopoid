@@ -36,4 +36,44 @@ $(function(){
     var outside_hoop = paper.circle(195, 200, 156, 156);
     outside_hoop.attr({stroke: "#000", "stroke-width": 5});
 
+    //Base colors
+    $(".base.pink").click(function() {
+	hoop.attr({stroke: "#ff6699"});
+    });
+
+    $(".base.blue").click(function() {
+	hoop.attr({stroke: "#1B70E0"});
+    });
+
+    $(".base.green").click(function() {
+	hoop.attr({stroke: "green"});
+    });
+
+    //Secondary colors
+    $(".secondary.pink").click(function() {
+	secondary_set.attr({stroke: "#ff6699"});
+    });
+
+    $(".secondary.blue").click(function() {
+	secondary_set.attr({stroke: "#1B70E0"});
+    });
+
+    $(".secondary.green").click(function() {
+	secondary_set.attr({stroke: "green"});
+    });
+    
+    //Grip colors
+    $(".grip.pink").click(function() {
+	grip_set.attr({stroke: "#ff6699"});
+    });
+
+    $(".grip.blue").click(function() {
+	grip_set.attr({stroke: "#1B70E0"});
+    });
+
+    $(".grip.green").click(function() {
+	grip_set.attr({stroke: "green"});
+    });
+	
+
  })
