@@ -1,0 +1,63 @@
+@font-face {
+    font-family: techniqo;
+    src: url('./media/techniqo.ttf');
+}
+
+body { 
+    background: url('./media/background.png');
+    margin: 0px;
+    
+}
+
+#top_bar {
+    width: 100%;
+    background: url('./media/con_background.png');
+}
+
+#top_header {
+    margin-left: 100px;
+}
+
+#top_header  h1 {
+    padding-top: 20px;
+    font-family: techniqo;
+    font-size: 50px;
+    margin: 0px;
+}
+
+/* Navigation Properties */
+
+#top_navigation {
+    margin-left: auto;
+    margin-right: auto;
+    width: 545px;
+    background: purple;
+}
+
+#top_navigation ul {
+    margin: 0px;
+}
+
+#top_navigation li {
+    display: inline;
+    margin-right: 40px;
+}
+
+#top_navigation a:link {
+    text-decoration: none;
+    font-size: 25pt;
+    color: black;
+}
+
+/* Content Properties */
+
+#content {
+    margin-left: 40px;
+}
+
+#content h2 {
+    
+
+.feature {
+    border: 2px solid black;
+}
