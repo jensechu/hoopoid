@@ -51,7 +51,7 @@ $(function(){
     });
 
     $(".base.white").click(function() {
-	grip_set.attr({stroke: "white"});
+	base_set.attr({stroke: "white"});
     });
 
     //Secondary colors
@@ -68,7 +68,7 @@ $(function(){
     });
     
     $(".secondary.white").click(function() {
-	grip_set.attr({stroke: "white"});
+	secondary_set.attr({stroke: "white"});
     });
 
     //Grip colors
