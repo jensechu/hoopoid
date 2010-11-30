@@ -1,32 +1,46 @@
 <!DOCTYPE html>
-<head>
-  <link rel="stylesheet" type="text/css" href="main.css">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="./js/lib/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="./js/lib/raphael-min.js"></script>
+    <script type="text/javascript" src="./js/hoop.js"></script>
+
     <title>hoopoid</title>
   </head>
-
-  <html>
-    <body>
-
-      <div id="top_bar">
-
-	<div id="top_header">
-	  <h1>hoopoid</h1> 
-	</div>               
+  <body>
+    <div id="container">
+      &nbsp;
+    </div>
+    <div id="control">
+      <h1>Tape Selector</h1>
+      <div class="tapes">
+        <h3>base tape</h3>
+	<div class="base pink">&nbsp;</div>
+	<div class="base light_blue">&nbsp;</div>
+	<div class="base green">&nbsp;</div>
+	<div class="base white">&nbsp;</div>
+	<div class="base black">&nbsp;</div>
       </div>
-	<div id="top_navigation">
-	  <ul>
-	    <li><a href="/home.html">home</a></li>
-	    <li><a href="/hoops.html">hoops</a></li>
-	    <li><a href="/about.html">about</a></li>
-	    <li><a href="/contact.html">contact</a></li>
-	  </ul>
-	</div>       
 
-       </div>     
-         
-      <div id="content">
-	stuff here
-      </div>      
+      <div class="tapes">
+        <h3>secondary tape</h3>
+	<div class="secondary yellow">&nbsp;</div>
+	<div class="secondary blue">&nbsp;</div>
+	<div class="secondary green">&nbsp;</div>
+	<div class="secondary white">&nbsp;</div>
+	<div class="secondary black">&nbsp;</div>
+      </div>
 
-    </body>
-  </html>
+      <div class="tapes">
+      <h3>grip tape</h3>
+	<div class="grip neon_pink">&nbsp;</div>
+	<div class="grip neon_yellow">&nbsp;</div>
+	<div class="grip neon_green">&nbsp;</div>
+	<div class="grip neon_orange">&nbsp;</div>
+	<div class="grip gray">&nbsp;</div>
+      </div>
+    </div>
+
+  </body>
+</html>

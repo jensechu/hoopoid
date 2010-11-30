@@ -1,63 +1,111 @@
-@font-face {
-    font-family: techniqo;
-    src: url('./media/techniqo.ttf');
-}
-
-body { 
-    background: url('./media/background.png');
-    margin: 0px;
-    
-}
-
-#top_bar {
-    width: 100%;
-    background: url('./media/con_background.png');
-}
-
-#top_header {
-    margin-left: 100px;
-}
-
-#top_header  h1 {
-    padding-top: 20px;
-    font-family: techniqo;
-    font-size: 50px;
-    margin: 0px;
-}
-
-/* Navigation Properties */
-
-#top_navigation {
+body {
+    background-color: #141414;
     margin-left: auto;
     margin-right: auto;
-    width: 545px;
-    background: purple;
+    width: 1010px;
+    color: #BEBEBE;
+    font-family: sans-serif;
 }
 
-#top_navigation ul {
-    margin: 0px;
+#container {
+    position: relative;
+    float: left;
 }
 
-#top_navigation li {
-    display: inline;
-    margin-right: 40px;
+#control {
+    margin-top: 100px;
+    width: 350px;
+    height: 400px;
+    background-color: #000;
+    padding: 0px 50px 0px 20px;
+    position: relative;
+    float: left;
 }
 
-#top_navigation a:link {
-    text-decoration: none;
-    font-size: 25pt;
+#control ul {
+    list-style-type: none;
+    padding: 0px;
+    margin-bottom: 40px;
     color: black;
 }
 
-/* Content Properties */
-
-#content {
-    margin-left: 40px;
+#control li {
+     display: inline;
+     height: 50px;
+     width: 50px; 
+     border: 1px solid black;
 }
 
-#content h2 {
-    
+#control h3 {
+    font-variant: small-caps;
+    border-bottom: 2px solid #bebebe;
+    margin: 0px 0px 10px 0px;
+}
 
-.feature {
-    border: 2px solid black;
+.tapes {
+    width: 380px;
+    margin-bottom: 80px;
+}
+
+.tapes div {
+    position: relative;
+    float: left;
+    margin-right: 15px;
+    height: 50px;
+    width: 60px;
+}
+
+/* TAPE COLORS */ 
+
+.black {
+    background-color: #000;
+    border: 1px solid white;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.pink {
+    background-color: #ff6699;
+}
+
+.light_blue {
+    background-color: #1B70E0;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+
+/*Secondary Tape */
+
+.yellow {
+    background-color: yellow;
+}
+
+/*Grip Tape */
+.neon_pink {
+    background-color: #FF0066;
+}
+
+.neon_yellow {
+    background-color: #D1FF03;
+}
+
+.neon_green {
+    background-color: #0DE032;
+}
+
+.neon_orange {
+    background-color: #FF1918;
+}
+
+.gray {
+    background-color: gray;
 }
