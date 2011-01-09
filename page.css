@@ -58,22 +58,6 @@ body {
     color: #BEBEBE;
 }
 
-/*#home a:hover { 
-    color: #ff6699;
-}
-
-#shop a:hover {
-    color: yellow;
-}
-
-#about a:hover {
-    color: #1B70E0;
-}
-
-#contact a:hover {
-    color: green;
-} */
-
 #navigation a:active {
     font-weight: bold;
 }
@@ -83,6 +67,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: black;
+    line-height: 18px;
 }
 
 .content {
