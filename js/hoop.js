@@ -7,7 +7,7 @@ $(function(){
     hoop.attr({stroke: "#ff6699", "stroke-width": 20});
 
     //Path for all tapes
-    var tape_path = paper.path("M200, 100 c-100,200 300,200 200,400");
+    var tape_path = paper.path("M200, 100 c-100,200 300,200 200,400").hide();
 
     //Tape generator
     function tape_generator(set){
@@ -21,10 +21,10 @@ $(function(){
 	return set;
     }
 
-    //Secondary tape generator
+    //Secondary tape placement
     var secondary_set = tape_generator(paper.set()).attr({stroke: "white", "stroke-width": 15});
     
-    //Grip tape generator
+    //Grip tape placement
     var grip_set = tape_generator(paper.set()).attr({stroke: "green", "stroke-width": 6});
      
     //Smooth out the tape edges    
@@ -32,8 +32,8 @@ $(function(){
     inside_hoop.attr({fill: "#141414"});
     var outside_hoop = paper.circle(300, 300, 225);
     outside_hoop.attr({stroke: "#141414", "stroke-width": 40});
-
-//Base colors
+  
+    //Base colors
     $(".base.pink").click(function() {
 	hoop.attr({stroke: "#ff6699"});
     });
