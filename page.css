@@ -81,10 +81,12 @@ body {
     padding-bottom: 20px;
 }
 
+
 #main_content img {
     height: 300px;
     width: 760px;
 }
+
 
 #content_special {
     float: right;
@@ -102,12 +104,16 @@ p {
     font-size: 11pt;
 }
 
+#main_content h3 {
+    padding-top: 10px;
+} 
+
 h3 {
     font-size: 18pt;
     font-variant: small-caps;
     border-bottom: 2px solid #bebebe;
-    padding-top: 10px;
-    margin: 0px 0px 10px 0px;   
+    margin-top: 10px;
+    padding: 5px 0px;
 }
 
 .pink {
