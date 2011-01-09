@@ -67,7 +67,10 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: black;
-    line-height: 18px;
+}
+
+#content_group p {
+    line-height: 24px;
 }
 
 .content {
