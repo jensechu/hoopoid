@@ -1,0 +1,19 @@
+{ %extends "base.html" %}
+
+{% if hoop_list %}
+{% for hoop in hoop_list %}
+<div class="item">
+
+  <div id="content_about" class="hoop_item"> 
+    <div class="hoop_header">
+      <h3 class="{{ hoop.header }}">{{ hoop.hoop|lower }}</h3><h4>${{ hoop.price }}</h4> 
+    </div>
+    <div id="hoop_image">
+      <img src="media/{{ hoop.image }}">
+    </div>
+  </div> 
+  {% endfor %}
+
+  {% else %}
+  <p>No hoops are available.</p>
+  {% endif %}

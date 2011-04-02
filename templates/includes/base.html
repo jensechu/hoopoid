@@ -1,0 +1,46 @@
+{% block base %}
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+    {%  block scripts %} 
+    {% endblock %}
+
+  </head> 
+  <body> 
+    <div id="wrapper"> 
+      <div id="header"> 
+	<div id="header_group"> 
+	  <div id="title"> 
+	    <h1><a href="./home.html">hoopoid</a></h1> 
+	  </div> 
+
+	  <div id="navigation"> 
+	    <ul> 
+
+	      {% block navigation %}<p>blah</p>
+	      {% endblock %}
+
+	    </ul> 
+	  </div> 
+	</div> 
+      </div> 
+      
+      {% block content %}
+      {% end block %}
+
+      <div id="footer_group">
+	<div id="footer">
+	  <div id="copyright">
+	  <p>2011 Hoopoid. All rights reserved.</p>
+	  </div>
+	</div>
+      </div>
+
+    </div>
+  </body>
+</html>
+
+{% endblock %}
+
