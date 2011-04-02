@@ -1,11 +1,92 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/shop.css" /> 
+    <script type="text/javascript" src="./js/lib/jquery-1.4.4.min.js"></script> 
+    <script type="text/javascript" src="./js/main.js"></script> 
+    <title>hoopoid :: store</title> 
+  </head> 
+  <body> 
+    <div id="wrapper"> 
+      <div id="header"> 
+	<div id="header_group"> 
+	  <div id="title"> 
+	    <h1><a href="./home.html">hoopoid</a></h1> 
+	  </div> 
+	  <div id="navigation"> 
+	    <ul> 
+	      <li id="home"><a href="./home.html" title="pink">home</a></li> 
+	      <li id="shop"><a href="./store.html" class="yellow selected" title="yellow">store</a></li> 
+	      <li id="about"><a href="./about.html" title="blue">about</a></li> 
+	      <li id="contact"><a href="./contact.html" title="green">contact</a></li> 
+	    </ul> 
+	  </div> 
+	</div> 
+      </div> 
+      
+      <div id="content_group"> 
+	<div id="content_about" class="hoop_item"> 
+	  <h3 class="blue">about hooping</h3> 
+	  <p>Item</p> 
+	</div> 
+	<div id="content_special" class="hoop_item"> 
+	  <h3 class="green">special offers</h3> 
+	  <p>Item</p> 
+	</div> 
+	
+	<div id="content_about" class="hoop_item"> 
+	  <h3 class="blue">about hooping</h3> 
+	  <p>Item</p> 
+	</div> 
+	<div id="content_special" class="hoop_item"> 
+	  <h3 class="green">special offers</h3> 
+	  <p>Item</p> 
+	</div> 
+	
+	<div id="content_about" class="hoop_item"> 
+	  <h3 class="blue">about hooping</h3> 
+	  <p>Item</p> 
+	</div> 
+	<div id="content_special" class="hoop_item"> 
+	  <h3 class="green">special offers</h3> 
+	  <p>Item</p> 
+	</div> 
+	
+	<div id="content_about" class="hoop_item"> 
+	  <h3 class="blue">about hooping</h3> 
+	  <p>Item</p> 
+	</div> 
+	<div id="content_special" class="hoop_item"> 
+	  <h3 class="green">special offers</h3> 
+	  <p>Item</p> 
+	</div> 
+      </div> 
+      <div id="footer_group"> 
+	<div id="footer"> 
+	  <div id="copyright"> 
+	    <p>2011 Hoopoid. All rights reserved.</p> 
+	  </div> 
+	</div> 
+      </div> 
+    </div> 
+    
+  </body> 
+</html> 
+
 {% if hoop_list %}
 {% for hoop in hoop_list %}
-<h1> {{ hoop.hoop }} </h1>
-<img src="media/{{ hoop.image }}">
-<ul>
-  <li>Price: {{ hoop.price }}</li>
-</ul
-    {% endfor %}
+<div class="item">
+
+  <div id="content_about" class="hoop_item"> 
+    <div class="hoop_header">
+      <h3 class="blue">{{ hoop.hoop }}</h3><h4>${{ hoop.price }}</h4> 
+    </div>
+    <div id="hoop_image">
+      <img src="media/{{ hoop.image }}">
+      <h4 class="price">${{ hoop.price }}</h4>
+    </div>
+  </div> 
+{% endfor %}
 
 {% else %}
     <p>No hoops are available.</p>

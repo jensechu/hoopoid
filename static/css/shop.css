@@ -76,9 +76,15 @@ body {
     height: 350px;
 }
 
+.hoop_item img {
+    height: 300px;
+    width: 300px;
+}
+
 #main_content {
     margin-top: 20px;
 }
+
 #main_content img {
     height: 300px;
     width: 760px;
@@ -127,12 +133,31 @@ p {
     padding-top: 15px;
 }
 
-h3 {
+#content_about h3 {
     font-size: 18pt;
     font-variant: small-caps;
-    border-bottom: 2px solid #bebebe;
     padding-top: 10px;
     margin: 0px 0px 10px 0px;   
+    position: relative;
+    float: left;
+}
+
+#content_about h4 {
+    position: relative;
+    float: right;
+}
+
+#hoop_image {
+    width: 325px;
+    border-top: 2px solid #bebebe;
+}
+
+#hoop_image img {
+    padding-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 300px;
+    width: 300px;
 }
 
 .pink {
