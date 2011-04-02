@@ -66,14 +66,14 @@ body {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    background-color: black;
 }
 
 .hoop_item {
     margin-top: 20px;
     padding: 0px 20px;
     background-color: black;
-    height: 350px;
+    height: 340px;
+    width: 350px;
 }
 
 .hoop_item img {
@@ -99,7 +99,6 @@ body {
 
 #content_about {
     float: left;
-    width: 350px;
     padding-bottom: 20px; 
 }
 
@@ -119,7 +118,6 @@ p {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    padding: 2px 20px;
 }
 
 #copyright {
@@ -131,6 +129,11 @@ p {
     font-size: 10pt;
     margin: 15px 20px;
     padding-top: 15px;
+}
+
+.hoop_header {
+    height: 50px;
+    border-bottom: 2px solid #bebebe;
 }
 
 #content_about h3 {
@@ -149,15 +152,13 @@ p {
 
 #hoop_image {
     width: 325px;
-    border-top: 2px solid #bebebe;
 }
 
 #hoop_image img {
-    padding-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 300px;
-    width: 300px;
+    padding-top: 5px;
+    margin-left: 0px;
+    height: 275px;
+    width: 350px;
 }
 
 .pink {
