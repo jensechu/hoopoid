@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 
 class Section(models.Model): 
     title = models.CharField("Section Title", max_length=100)
@@ -32,3 +34,7 @@ class SectionContent(models.Model):
 
     def __repr__(self):
         return u"<Section Content(%s, %s): %s>" % (string(self.section), self.pk, unicode(self))
+
+@receiver(pre_save, sender=Section, dispatch_uid="Validating the Section model.")
+def section_default_check(sender, instance, **kwargs):
+    print "Sender:", sender, instance
