@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>this is the {{ slug }}</h1>
+<h1>This is the {{ slug }}</h1>
 <h2>Section: {{ section }}</h2>
+<h3>Contents: {{ section.contents.count }}</h3>
+
+{% for content in section.contents.all %}
+    <div class="section {{ content.css_class }}" id="id_content_{{ content.slug }}">
+      <h3>{{ content.title }}</h3>
+      {% if content.image %}
+        <img src="{{ content.image.url }}" alt="{{ content.title }}">
+      {% endif %}	
+      {% if content.text %}
+        <p>{{ content.text }}</p>
+      {% endif %}
+    </div>
+{% endfor %}
 {% endblock %}

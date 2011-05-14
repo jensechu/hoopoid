@@ -10,9 +10,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'hoopoid.views.home', name='home'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-                       
-    url(r'^(?P<slug>[\w_-]+)/', 'hoopoid.content.views.section', name="section"),
-    url(r'^$', 'hoopoid.content.views.section', name="default"),
 )
 
 if settings.DEBUG:
@@ -23,3 +20,8 @@ if settings.DEBUG:
                     'document_root': settings.MEDIA_ROOT,
         }),
     )
+
+urlpatterns += patterns('hoopoid.content.views', 
+    url(r'^(?P<slug>[\w_-]+)/', 'section', name="section"),
+    url(r'^$', 'section', name="default"),
+)
