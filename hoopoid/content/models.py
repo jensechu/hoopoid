@@ -36,7 +36,7 @@ class Section(models.Model):
         return u"<Section(%s): %s>" % (self.pk, unicode(self))
 
 class SectionContent(models.Model):
-    section = models.ForeignKey(Section)
+    section = models.ForeignKey(Section, related_name="contents")
 
     title = models.CharField("Header Title", max_length=100)
     slug = models.SlugField("Content Slug", max_length=100, unique=True)
@@ -51,7 +51,7 @@ class SectionContent(models.Model):
     __str__ = __unicode__
 
     def __repr__(self):
-        return u"<Section Content(%s, %s): %s>" % (string(self.section), self.pk, unicode(self))
+        return u"<Section Content(%s, %s): %s>" % (str(self.section), self.pk, unicode(self))
 
 @receiver(pre_delete, sender=Section, dispatch_uid="Validating the Section model.")
 def default_delete_check(sender, instance, **kwargs):
