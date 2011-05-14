@@ -20,8 +20,9 @@
 	          <li id="home"><a href="/" title="pink" class="pink selected">home</a></li> 
 	        {% else %}
 	          {% for nav in all_sections %}
-	            <li id="{{ nav.slug }}"><a href="{% url section slug=nav.slug %}" title="pink" class="nav pink{% if nav == section %} selected{% endif %}">{{ nav.title|lower }}</a></li> 
+	            <li id="{{ nav.slug }}"><a href="{% url section slug=nav.slug %}" title="{{ nav.title_color }}" class="nav {% if nav == section %}{{ nav.title_color }} selected{% endif %}">{{ nav.title|lower }}</a></li> 
 		  {% endfor %}
+	      <li id="store"><a href="../store" title="yellow" class="yellow selected">store</a></li> 
 		{% endif %}
 	      {% endblock %}
 	    </ul> 

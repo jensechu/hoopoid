@@ -10,14 +10,14 @@ class LastEdittedByAdmin(admin.ModelAdmin):
 class SectionAdmin(LastEdittedByAdmin):
     list_display = ('title', 'default', 'last_editted_by')
     fieldsets = (
-        (None, {'fields': ('title', 'slug', 'default')}),
+        (None, {'fields': ('title', 'slug', 'default', 'title_color',)}),
     )
     prepopulated_fields = {"slug": ("title",)}
     
 class SectionContentAdmin(LastEdittedByAdmin):
     list_display = ('title', 'section', 'last_editted_by')
     fieldsets = (
-        (None, {'fields': ('section', 'title', 'slug', 'css_class', 'image', 'text')}),
+        (None, {'fields': ('section', 'title', 'slug', 'title_color', 'css_class', 'image', 'text')}),
     )
 
     prepopulated_fields = {"slug": ("title",)}

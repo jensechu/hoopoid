@@ -8,6 +8,13 @@ class Section(models.Model):
     title = models.CharField("Section Title", max_length=100)
     slug = models.SlugField("Section Slug", max_length=100, unique=True)    
     default = models.BooleanField("Default Section?", default=False)
+    COLORS = (
+        ('pink', 'Pink'),
+        ('blue', 'Blue'),
+        ('green', 'Green'),
+        ('yellow', 'Yellow'),
+        )
+    title_color = models.CharField(max_length=50, choices=COLORS)
 
     last_editted_by = models.ForeignKey(User)
 
@@ -43,6 +50,13 @@ class SectionContent(models.Model):
     css_class = models.CharField("CSS Class", max_length=50)
     image = models.ImageField("Section Image", upload_to="section_images", blank=True)
     text = models.TextField("Section Text", blank=True)
+    COLORS = (
+        ('pink', 'Pink'),
+        ('blue', 'Blue'),
+        ('green', 'Green'),
+        ('yellow', 'Yellow'),
+        )
+    title_color = models.CharField(max_length=50, choices=COLORS)
     
     last_editted_by = models.ForeignKey(User)
 
