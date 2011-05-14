@@ -3,9 +3,6 @@ from django.contrib.auth.models import User
 from django.db.models.signals import pre_delete
 from django.dispatch import receiver
 from django.core.exceptions import ValidationError
-import logging
-
-logger = logging.getLogger(__name__)
 
 class Section(models.Model): 
     title = models.CharField("Section Title", max_length=100)
@@ -59,10 +56,13 @@ class SectionContent(models.Model):
 @receiver(pre_delete, sender=Section, dispatch_uid="Validating the Section model.")
 def default_delete_check(sender, instance, **kwargs):
     if not sender.objects.filter(default=True).exclude(pk=instance.pk).count():
-        new_default = sender.objects.filter(default=False).latest("pk")
-        new_default.default = True
-        new_default.save()
-        print "Promoted to default:", new_default
+        try:
+            new_default = sender.objects.filter(default=False).latest("pk")
+            new_default.default = True
+            new_default.save()
+            print "Promoted to default:", new_default
+        except sender.DoesNotExist:
+            print "No Sections to promote to default."
         print "Deleting only default:", instance
     else:
         print "There is another valid default specified."
