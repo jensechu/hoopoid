@@ -7,6 +7,7 @@ def section(request, slug=None):
     context = {
         'section': None,
         'slug': slug,
+        'all_sections': Section.objects.all(),
     }
 
     try:
