@@ -38,3 +38,8 @@ class SectionContent(models.Model):
 @receiver(pre_save, sender=Section, dispatch_uid="Validating the Section model.")
 def section_default_check(sender, instance, **kwargs):
     print "Sender:", sender, instance
+
+    if sender.objects.count() == 0:
+        instance.default = True
+    else:
+        print "Instance is not the first!!!!!!!!!!!!!"
