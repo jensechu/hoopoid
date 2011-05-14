@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 class Section(models.Model): 
     title = models.CharField("Section Title", max_length=100)
     slug = models.SlugField("Section Slug", max_length=100, unique=True)    
+    default = models.BooleanField("Default Section?", default=False)
 
     last_editted_by = models.ForeignKey(User)
     

@@ -8,9 +8,9 @@ class LastEdittedByAdmin(admin.ModelAdmin):
     
 
 class SectionAdmin(LastEdittedByAdmin):
-    list_display = ('title', 'last_editted_by')
+    list_display = ('title', 'default', 'last_editted_by')
     fieldsets = (
-        (None, {'fields': ('title', 'slug')}),
+        (None, {'fields': ('title', 'slug', 'default')}),
     )
     prepopulated_fields = {"slug": ("title",)}
     

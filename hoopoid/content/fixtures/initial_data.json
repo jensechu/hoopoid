@@ -1,0 +1,51 @@
+[
+    {
+        "pk": 1, 
+        "model": "content.section", 
+        "fields": {
+            "slug": "home", 
+            "last_editted_by": 1, 
+            "title": "Home",
+	    "default": true
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "content.sectioncontent", 
+        "fields": {
+            "title": "Featured Hoop", 
+            "css_class": "content full", 
+            "section": 1, 
+            "last_editted_by": 1, 
+            "image": "section_images/hoops.jpg", 
+            "text": "", 
+            "slug": "featured-hoop"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "content.sectioncontent", 
+        "fields": {
+            "title": "About Hooping", 
+            "css_class": "content half left", 
+            "section": 1, 
+            "last_editted_by": 1, 
+            "image": "", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel dapibus dui. Pellentesque rutrum interdum massa, nec bibendum nisi varius ac. Quisque dui enim, iaculis ut feugiat non, ullamcorper sed nunc. Aliquam egestas purus lorem. Sed consectetur laoreet odio id dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Curabitur porta sollicitudin mauris, vestibulum volutpat mauris porta sagittis. Sed ultrices sollicitudin ligula a pellentesque. Aenean consectetur mollis mattis. Donec gravida, ipsum ac euismod volutpat, lorem lacus pharetra erat, ac vulputate dui diam ac nibh. Vestibulum in urna tortor. Quisque consectetur metus et augue pellentesque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In iaculis egestas iaculis.", 
+            "slug": "about-hooping"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "content.sectioncontent", 
+        "fields": {
+            "title": "Special Offers", 
+            "css_class": "content right half", 
+            "section": 1, 
+            "last_editted_by": 1, 
+            "image": "", 
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel dapibus dui. Pellentesque rutrum interdum massa, nec bibendum nisi varius ac. Quisque dui enim, iaculis ut feugiat non, ullamcorper sed nunc. Aliquam egestas purus lorem. Sed consectetur laoreet odio id dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Curabitur porta sollicitudin mauris, vestibulum volutpat mauris porta sagittis. Sed ultrices sollicitudin ligula a pellentesque. Aenean consectetur mollis mattis. Donec gravida, ipsum ac euismod volutpat, lorem lacus pharetra erat, ac vulputate dui diam ac nibh. Vestibulum in urna tortor. Quisque consectetur metus et augue pellentesque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In iaculis egestas iaculis.", 
+            "slug": "special-offers"
+        }
+    }
+]
