@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
+from django.core.exceptions import ValidationError
 
 class Section(models.Model): 
     title = models.CharField("Section Title", max_length=100)
@@ -9,7 +10,24 @@ class Section(models.Model):
     default = models.BooleanField("Default Section?", default=False)
 
     last_editted_by = models.ForeignKey(User)
-    
+
+    def clean(self):
+        print "Model clean method called"
+        if Section.objects.count() == 0:
+            self.default = True
+        else:
+            print "Instance is not the first!!!!!!!!!!!!!"
+            
+        if self.default:
+            Section.objects.all().update(default=False)
+        else: 
+            if not Section.objects.filter(default=True).exclude(pk=self.pk).count():
+                raise ValidationError('You must have a default Section.')
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        return super(Section, self).save(*args, **kwargs)
+                
     def __unicode__(self):
         return self.title
     __str__ = __unicode__
@@ -34,17 +52,3 @@ class SectionContent(models.Model):
 
     def __repr__(self):
         return u"<Section Content(%s, %s): %s>" % (string(self.section), self.pk, unicode(self))
-
-@receiver(pre_save, sender=Section, dispatch_uid="Validating the Section model.")
-def section_default_check(sender, instance, **kwargs):
-    print "Sender:", sender, instance
-
-    if sender.objects.count() == 0:
-        instance.default = True
-    else:
-        print "Instance is not the first!!!!!!!!!!!!!"
-
-    if instance.default:
-        sender.objects.all().update(default=False)
-    else: 
-        print "This instance is not set to be the default."
