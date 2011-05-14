@@ -12,7 +12,10 @@ def section(request, slug=None):
     try:
         context["section"] = Section.objects.get(slug=slug)
     except Section.DoesNotExist:
-        raise Http404("No Section with this slug was found.")
+        if slug is None:
+            context["section"] = Section.objects.get(default=True)
+        else:
+            raise Http404("No Section with this slug was found.")
 
     return render_to_response('content/section.html',
                               context,
