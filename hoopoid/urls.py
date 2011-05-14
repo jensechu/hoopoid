@@ -21,6 +21,11 @@ if settings.DEBUG:
         }),
     )
 
+urlpatterns += patterns('hoopoid.inventory.views', 
+    #url(r'^(?P<slug>[\w_-]+)/', 'section', name="section"),
+    url(r'^store', 'store', name="default"),
+)
+
 urlpatterns += patterns('hoopoid.content.views', 
     url(r'^(?P<slug>[\w_-]+)/', 'section', name="section"),
     url(r'^$', 'section', name="default"),

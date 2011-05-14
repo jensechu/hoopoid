@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if hoop_list %}
+<div id="all_hoops">
+  {% for hoop in hoop_list %}
+    <div class="item">
+      <div id="id_inventory_{{ hoop.slug }}" class="hoop_item"> 
+	<div class="hoop_header">
+	  <h3 class="{{ hoop.title_color }}">{{ hoop.title|lower }}</h3><h4>${{ hoop.price }}</h4> 
+	</div>
+	<div id="hoop_image">
+	  <img src="{{ hoop.image.url }}">
+	</div>
+      </div> 
+    </div>
+
+  {% endfor %}
+</div>
+  {% else %}
+  <p>No hoops are available.</p>
+{% endif %}
+{% endblock %}
+
