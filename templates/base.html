@@ -1,12 +1,10 @@
-{% block base %}
 <!DOCTYPE html> 
 <html> 
   <head> 
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/page.css" /> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-    {%  block scripts %} 
-    {% endblock %}
-
+    <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+    <title>hoopoid :: store</title> 
   </head> 
   <body> 
     <div id="wrapper"> 
@@ -15,20 +13,33 @@
 	  <div id="title"> 
 	    <h1><a href="./home.html">hoopoid</a></h1> 
 	  </div> 
-
 	  <div id="navigation"> 
 	    <ul> 
-
-	      {% block navigation %}<p>blah</p>
-	      {% endblock %}
-
+	      <li id="home"><a href="./home.html" title="pink" class="pink selected">home</a></li> 
+	      <li id="shop"><a href="./store.html" title="yellow">store</a></li> 
+	      <li id="about"><a href="./about.html" title="blue">about</a></li> 
+	      <li id="contact"><a href="./contact.html" title="green">contact</a></li> 
 	    </ul> 
 	  </div> 
 	</div> 
       </div> 
-      
-      {% block content %}
-      {% endblock %}
+      <div id="content_group">
+	<div id="main_content" class="content">
+	  <h3 class="pink">featured hoop</h3>
+	  <img src="./media/hoops.jpg" />
+	</div>
+	<div id="content_about" class="content">
+	  <h3 class="blue">about hooping</h3>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel dapibus dui. Pellentesque rutrum interdum massa, nec bibendum nisi varius ac. Quisque dui enim, iaculis ut feugiat non, ullamcorper sed nunc. Aliquam egestas purus lorem. Sed consectetur laoreet odio id dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Curabitur porta sollicitudin mauris, vestibulum volutpat mauris porta sagittis. Sed ultrices sollicitudin ligula a pellentesque. Aenean consectetur mollis mattis. Donec gravida, ipsum ac euismod volutpat, lorem lacus pharetra erat, ac vulputate dui diam ac nibh. Vestibulum in urna tortor. Quisque consectetur metus et augue pellentesque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In iaculis egestas iaculis.
+	  </p>
+	</div>
+	<div id="content_special" class="content">
+	  <h3 class="green">special offers</h3>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel dapibus dui. Pellentesque rutrum interdum massa, nec bibendum nisi varius ac. Quisque dui enim, iaculis ut feugiat non, ullamcorper sed nunc. Aliquam egestas purus lorem. Sed consectetur laoreet odio id dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Curabitur porta sollicitudin mauris, vestibulum volutpat mauris porta sagittis. Sed ultrices sollicitudin ligula a pellentesque. Aenean consectetur mollis mattis. Donec gravida, ipsum ac euismod volutpat, lorem lacus pharetra erat, ac vulputate dui diam ac nibh. Vestibulum in urna tortor. Quisque consectetur metus et augue pellentesque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In iaculis egestas iaculis.
+	  </p>
+	</div>
+      </div>
+
 
       <div id="footer_group">
 	<div id="footer">
@@ -41,6 +52,3 @@
     </div>
   </body>
 </html>
-
-{% endblock %}
-

@@ -8,10 +8,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'hoopoid.views.home', name='home'),
-    url(r'^(?P<slug>[\w_-]+)/', 'hoopoid.content.views.section', name="section"),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
                        
+    url(r'^(?P<slug>[\w_-]+)/', 'hoopoid.content.views.section', name="section"),
     url(r'^$', 'hoopoid.content.views.section', name="default"),
 )
 
