@@ -43,3 +43,8 @@ def section_default_check(sender, instance, **kwargs):
         instance.default = True
     else:
         print "Instance is not the first!!!!!!!!!!!!!"
+
+    if instance.default:
+        sender.objects.all().update(default=False)
+    else: 
+        print "This instance is not set to be the default."
