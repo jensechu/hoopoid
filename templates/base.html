@@ -20,7 +20,7 @@
 	          <li id="home"><a href="/" title="pink" class="pink selected">home</a></li> 
 	        {% else %}
 	          {% for nav in all_sections %}
-	            <li id="{{ nav.slug }}"><a href="{% url section slug=nav.slug %}" title="pink" class="pink{% if nav == section %} selected{% endif %}">{{ nav.title }}</a></li> 
+	            <li id="{{ nav.slug }}"><a href="{% url section slug=nav.slug %}" title="pink" class="nav pink{% if nav == section %} selected{% endif %}">{{ nav.title|lower }}</a></li> 
 		  {% endfor %}
 		{% endif %}
 	      {% endblock %}
@@ -32,6 +32,7 @@
 	{% block content %}
 	<!-- Rendered without content -->
 	{% endblock %}
+      </div>
 	<div id="footer">
 	  <div id="copyright">
 	  <p>2011 Hoopoid. All rights reserved.</p>

@@ -79,25 +79,28 @@ body {
     background-color: black;
 }
 
-#main_content {
+.full {
     margin-top: 20px;
     padding-bottom: 20px;
 }
 
 
-#main_content img {
+.full img {
     height: 300px;
     width: 760px;
 }
 
+.full h3 {
+    padding-top: 10px;
+}
 
-#content_special {
+.right {
     float: right;
     width: 350px;
     padding-bottom: 20px;
 }
 
-#content_about {
+.left {
     float: left;
     width: 350px;
     padding-bottom: 20px; 
@@ -135,14 +138,18 @@ h3 {
 }
 
 #copyright {
-    background-color: black;
     height: 50px;
+    position: relative;
+    float: left;
+    background-color: black;
+    width: 800px;
+    margin-top: 20px;
 }
 
 #copyright p {
     font-size: 10pt;
     margin: 15px 20px;
-    padding-top: 15px;
+
 }
 
 .pink {
