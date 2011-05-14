@@ -1,8 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.signals import pre_save
+from django.db.models.signals import pre_delete
 from django.dispatch import receiver
 from django.core.exceptions import ValidationError
+import logging
+
+logger = logging.getLogger(__name__)
 
 class Section(models.Model): 
     title = models.CharField("Section Title", max_length=100)
@@ -16,7 +19,7 @@ class Section(models.Model):
         if Section.objects.count() == 0:
             self.default = True
         else:
-            print "Instance is not the first!!!!!!!!!!!!!"
+            print "This instance is not the first Section model."
             
         if self.default:
             Section.objects.all().update(default=False)
@@ -27,7 +30,7 @@ class Section(models.Model):
     def save(self, *args, **kwargs):
         self.clean()
         return super(Section, self).save(*args, **kwargs)
-                
+
     def __unicode__(self):
         return self.title
     __str__ = __unicode__
@@ -52,3 +55,14 @@ class SectionContent(models.Model):
 
     def __repr__(self):
         return u"<Section Content(%s, %s): %s>" % (string(self.section), self.pk, unicode(self))
+
+@receiver(pre_delete, sender=Section, dispatch_uid="Validating the Section model.")
+def default_delete_check(sender, instance, **kwargs):
+    if not sender.objects.filter(default=True).exclude(pk=instance.pk).count():
+        new_default = sender.objects.filter(default=False).latest("pk")
+        new_default.default = True
+        new_default.save()
+        print "Promoted to default:", new_default
+        print "Deleting only default:", instance
+    else:
+        print "There is another valid default specified."
