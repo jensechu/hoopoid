@@ -11,3 +11,5 @@ def store(request):
             'hoop_list': hoop_list,
             })
     return HttpResponse(t.render(c))
+
+# t = loader.get_template('includes/head_index.html')

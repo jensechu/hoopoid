@@ -1,5 +1,6 @@
 body {
-    background-color: #262626;
+    /*background-color: #262626; */
+    background-color: red;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -66,25 +67,24 @@ body {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
+    background-color: black;
 }
 
 .hoop_item {
     margin-top: 20px;
     padding: 0px 20px;
     background-color: black;
-    height: 340px;
-    width: 350px;
+    height: 350px;
 }
 
 .hoop_item img {
-    height: 300px;
-    width: 300px;
+    height: 325px;
+    width: 325px;
 }
 
 #main_content {
     margin-top: 20px;
 }
-
 #main_content img {
     height: 300px;
     width: 760px;
@@ -99,6 +99,7 @@ body {
 
 #content_about {
     float: left;
+    width: 350px;
     padding-bottom: 20px; 
 }
 
@@ -118,6 +119,7 @@ p {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
+    padding: 2px 20px;
 }
 
 #copyright {
@@ -131,34 +133,12 @@ p {
     padding-top: 15px;
 }
 
-.hoop_header {
-    height: 50px;
-    border-bottom: 2px solid #bebebe;
-}
-
-#content_about h3 {
+h3 {
     font-size: 18pt;
     font-variant: small-caps;
+    border-bottom: 2px solid #bebebe;
     padding-top: 10px;
     margin: 0px 0px 10px 0px;   
-    position: relative;
-    float: left;
-}
-
-#content_about h4 {
-    position: relative;
-    float: right;
-}
-
-#hoop_image {
-    width: 325px;
-}
-
-#hoop_image img {
-    padding-top: 5px;
-    margin-left: 0px;
-    height: 275px;
-    width: 350px;
 }
 
 .pink {
@@ -174,10 +154,5 @@ p {
 }
 
 .yellow {
-    color: yellow;
-}
-
-.red {
-    color: #F86254;
-    margin: 50px;
+color: yellow;
 }
